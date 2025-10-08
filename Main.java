@@ -63,15 +63,17 @@ public class  MyString{
     }
 
     // Split the Entire String into Words
-    public static void split(String str) {
-	// Store Strings into a String array
-        String[] words = str.split("\\s+");
-        System.out.println("Split words:");
-	// Start a Loop to print all the words present in the words array
-        for (String word : words) {
-            System.out.println(word);
-        }
+// Split the Entire String into Words and return as ArrayList
+public static ArrayList<String> split(String str) {
+    ArrayList<String> wordsList = new ArrayList<>();
+    // Split the string by whitespace
+    String[] words = str.split("\\s+");
+    // Add each word to the ArrayList
+    for (String word : words) {
+        wordsList.add(word);
     }
+    return wordsList;
+}
 
     // Finding Max Repeating Character
     public static char maxRepeatingCharacter(String str) {
@@ -169,9 +171,14 @@ public static String shift(String str, int n) {
                 System.out.println("Spliced String: " + splice(input, start, end));
                 break;
 
-            case 6:
-                split(input);
-                break;
+           case 6:
+    ArrayList<String> words = split(input);
+    System.out.println("Split words:");
+    for (String word : words) {
+        System.out.println(word);
+    }
+    break;
+
 
             case 7:
                 System.out.println("Max Repeating Character: " + maxRepeatingCharacter(input));
@@ -199,5 +206,6 @@ public static String shift(String str, int n) {
     }
 
 }
+
 
 
