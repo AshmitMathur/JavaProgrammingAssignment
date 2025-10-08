@@ -54,7 +54,7 @@ public class Task1 {
     // Finding Max Repeating Character
     public static char maxRepeatingCharacter(String str) {
         int[] freq = new int[256];
-	// Storing Frequency of all Ascii characters in a frequency array
+	// Storing Frequency of all Ascii(0-255) characters in a frequency array
         for (char c : str.toCharArray()) freq[c]++;
         int max = 0;
         char result = ' ';
@@ -175,4 +175,5 @@ public static String shift(String str, int n) {
 
         sc.close();
     }
+
 }
