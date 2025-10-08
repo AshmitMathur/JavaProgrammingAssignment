@@ -20,10 +20,27 @@ public class  MyString{
         return words.length;
     }
 
+	boolean match(String str,String a,int idx) {
+		if(idx + a.length() > str.length()) return false;
+		for(int j=0 ; j<a.length(); j++) {
+			if(str.charAt(idx + j) != a.charAt(j)) return false;
+		}
+		return true;
+	}
     // Replacing the Substring
     public static String replace(String original, String target, String replacement) {
-	// Using replace method for replacement of string
-        return original.replace(target, replacement);
+		int idx = 0;
+		while(idx < original.length()) {
+			if(match(target, idx)) {
+				result += replacement;
+				idx += target.length();
+			}
+			else {
+				replacement += original.charAt(idx);
+				idx++;
+			}
+		}
+		return result;
     }
 
     // Checking Palindrome
@@ -181,3 +198,4 @@ public static String shift(String str, int n) {
     }
 
 }
+
