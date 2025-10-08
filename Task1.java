@@ -16,11 +16,37 @@ public class Task1 {
         return words.length;
     }
 
-    // Replacing the Substring
-    public static String replace(String original, String target, String replacement) {
-	// Using replace method for replacement of string
-        return original.replace(target, replacement);
+	// check if substring matches and return
+     boolean matchesAt(String a, int idx) {
+        if (idx + a.length() > currentString.length()) return false;
+
+       for (int j = 0; j < a.length(); j++) {
+          if (currentString.charAt(idx + j) != a.charAt(j)) {
+            return false; 
+           }
     }
+    return true; 
+}
+
+// replaces occurences of string a with string b
+    String replacestr(String a, String b) {
+
+      String result = "";
+       int idx = 0;
+
+      while (idx < currentString.length()) {
+        if (matchesAt(a, idx)) {
+            result += b;
+            idx += a.length(); 
+        } else {
+            result += currentString.charAt(idx);
+            idx++;
+        }
+      }
+
+       return result;
+}
+
 
     // Checking Palindrome
     public static boolean isPalindrome(String str) {
@@ -177,3 +203,4 @@ public static String shift(String str, int n) {
     }
 
 }
+
