@@ -40,7 +40,7 @@ public class Task1 {
         return str.substring(start, end);
     }
 
-    // Split the Entire String into Words
+    // Split the Entire String into Words and store in an array
     public static void split(String str) {
 	// Store Strings into a String array
         String[] words = str.split("\\s+");
@@ -177,3 +177,4 @@ public static String shift(String str, int n) {
     }
 
 }
+
