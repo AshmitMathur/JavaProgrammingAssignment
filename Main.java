@@ -20,6 +20,7 @@ public class  MyString{
         return words.length;
     }
 
+	// Verify whether the original string contains replacing string
 	boolean match(String str,String a,int idx) {
 		if(idx + a.length() > str.length()) return false;
 		for(int j=0 ; j<a.length(); j++) {
@@ -198,4 +199,5 @@ public static String shift(String str, int n) {
     }
 
 }
+
 
