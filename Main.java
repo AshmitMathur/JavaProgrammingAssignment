@@ -1,6 +1,10 @@
 import java.util.*;
-
-public class Task1 {
+/ ** 
+* @Filename - MyString.java
+* @description - This will perform most of the string operations
+* @author - Ashmit Mathur
+*/ 
+public class  MyString{
 
     // Appending Strings Method
     public static String append(String original, String toAppend) {
@@ -175,4 +179,5 @@ public static String shift(String str, int n) {
 
         sc.close();
     }
+
 }
