@@ -1,5 +1,11 @@
 import java.util.HashSet;
-import java.util.Scanner;
+import java.util.Scanner
+
+/** 
+* @Filename - Strings.java
+* @description - This will perform more String Functions
+* @author - Ashmit Mathur
+*/ 
 
 public class Strings {//Helper for countUniquePalindromes
     public static boolean isPalindrome(String tempString) {
